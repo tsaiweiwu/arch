@@ -25,7 +25,7 @@
 - To view all the cluster profiles available
   > \>\> parallel.listProfiles        
 
-  We can inspect the cluster profile with  
+  We can get a handle of the cluster profile with  
   > \>\> rf = parcluster('rockfish')   
 
   ![image](https://github.com/tsaiweiwu/arch/assets/10214345/56e89476-b960-43f1-b6ca-00c0a825c407)
@@ -39,8 +39,11 @@
   > \>\> rf.AdditionalProperties.Partition = 'shared'  
   > \>\> rf.AdditionalProperties.Partition = '01:00:00'
 
-  save the profile for future use   
-  > \>\> rf.saveProfile  
+  Save the handle to the original profile with   
+  > \>\> rf.saveProfile
+
+  Or save the handle to a new profile
+  > \>\> saveAsProfile(rf, 'new_profile_name')  
 
 -   
 
