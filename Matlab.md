@@ -1,5 +1,5 @@
 
-### How to set up the cluster profile for Matlab Distributed Computing Engine  
+### Getting Started with Parallel Computing using Matlab on Rockfish    
 
 - First, check and load the matlab version you need. 
 
@@ -8,19 +8,40 @@
 
 - The help scripts for setting up the cluster profile is located in  
 
-  `/data/apps/extern/matlab/matlab_parallel_server`
+  `/data/apps/extern/matlab/matlab_parallel_server`  
 
-  So we need to launch matlab and go into the folder.  
+  Start Matlab either in CLI or GUI and change into the folder.
+
+- For CLI (Command Line Interface)  
 
   > $ matlab -nodesktop -nosplash  
   > \>\> cd /data/apps/extern/matlab/matlab_parallel_server/scripts
-  > \>\> configCluster
 
-  **Note: running configCluster.m is needed for every version of Matlab at least once.**
+  Running configCluster.m to create the cluster profile `rockfish` in `$HOME/.matlab`   
+  > \>\> configCluster   
 
-- The cluster profile `rockfish` is created and saved in `$HOME/.matlab/`
-  We can inspect the cluster profile with
+  **Note: this step is necessary for the first time of every version of Matlab**  
 
-  > \>\> rf = parcluster('rockfish')  
+- To view all the cluster profiles available
+  > \>\> parallel.listProfiles        
+
+  We can inspect the cluster profile with  
+  > \>\> rf = parcluster('rockfish')   
+
+  ![image](https://github.com/tsaiweiwu/arch/assets/10214345/56e89476-b960-43f1-b6ca-00c0a825c407)
+
+  There are some additional job parameters in the `AdditionalProperties` list
+  
+  <img width="370" alt="image" src="https://github.com/tsaiweiwu/arch/assets/10214345/d27bd77a-7920-4b10-9786-1aaa64f78f03">
+
+  We set the default partition to `parallel` and the default walltime to 30 minutes. They can be modified with these commands  
+
+  > \>\> rf.AdditionalProperties.Partition = 'shared'  
+  > \>\> rf.AdditionalProperties.Partition = '01:00:00'
+
+  save the profile for future use   
+  > \>\> rf.saveProfile  
+
+-   
 
   
