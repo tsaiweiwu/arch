@@ -12,6 +12,13 @@
 
   Start Matlab either in CLI or GUI and change into the folder.
 
+- For GUI (Graphical User Interface)
+  
+  Launch Matlab GUI
+  $ matlab  
+
+  
+  
 - For CLI (Command Line Interface)  
 
   > $ matlab -nodesktop -nosplash  
@@ -45,6 +52,7 @@
   Or save the handle to a new profile
   > \>\> saveAsProfile(rf, 'new_profile_name')  
 
--   
+- Questions:
+  How to copy or rename the cluster Profiles from command line    
 
   
