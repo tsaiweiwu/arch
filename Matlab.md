@@ -6,30 +6,20 @@
   > $ module spider matlab   
   > $ module load matlab/R2024a   
 
-- The help scripts for setting up the cluster profile is located in  
+- For GUI (Graphical User Interface) usage:
 
-  `/data/apps/extern/matlab/matlab_parallel_server`  
-
-  Start Matlab either in CLI or GUI and change into the folder.
-
-- For GUI (Graphical User Interface)
+  Launch Matlab GUI `$ matlab`    
   
-  Launch Matlab GUI
-  $ matlab  
+- For CLI (Command Line Interface) usage: 
 
-  
-  
-- For CLI (Command Line Interface)  
+  Launch Matlab `$ matlab -nodesktop -nosplash`   
 
-  > $ matlab -nodesktop -nosplash  
-  > \>\> cd /data/apps/extern/matlab/matlab_parallel_server/scripts
-
-  Running configCluster.m to create the cluster profile `rockfish` in `$HOME/.matlab`   
+- Running configCluster.m to create the cluster profile `rockfish` in `$HOME/.matlab`   
   > \>\> configCluster   
 
-  **Note: this step is necessary for the first time of every version of Matlab**  
+  **Note: For now, this step is necessary for the first time of every version of Matlab**  
 
-- To view all the cluster profiles available
+- To view all the cluster profiles available  
   > \>\> parallel.listProfiles        
 
   We can get a handle of the cluster profile with  
@@ -55,4 +45,7 @@
 - Questions:
   How to copy or rename the cluster Profiles from command line    
 
+  <img width="935" alt="image" src="https://github.com/tsaiweiwu/arch/assets/10214345/12afff58-01a0-4142-9c4d-f06007570494">
+
   
+
