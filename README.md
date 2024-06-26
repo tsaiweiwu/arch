@@ -6,8 +6,11 @@
 
 - GPU billing  
 
-  for a100 partition, one gpu x one hour = 12 SU   
-  for ica100 partition, one gpu x one hour = 16 SU  
+  for a100 partition, there are 4 gpus and 48 cpus per node, which maps to 12 cpus for 1 gpu.   
+  Therefore, (1 gpu + <= 12 cpus) x 1 hour is equal to 12 SU.   
 
-  Note gpu number is also tied to cpu number, i.e. 12 cpu for 1 gpu.
-  If one gpu and 13 cpus are allocated for one hour, it will billed for 2 gpu, which is 24SU  
+  for ica100 partition, there are 4 gpus and 64 cpus per node, which maps to 16 cpus for 1 gpu.   
+  (1 gpu + <= 16 cpus) x 1 hour is equal to 16 SU.  
+
+  Note gpu number is also tied to cpu number, i.e. 12 cpu for 1 gpu.  
+  If one gpu and 13 cpus are allocated for one hour, it will be billed for 2 gpu, which is 24SU on a100 partition.    
