@@ -13,4 +13,4 @@
   (1 gpu + <= 16 cpus) x 1 hour is equal to 16 SU.  
 
   Note gpu number is also tied to cpu number, i.e. 12 cpu for 1 gpu.  
-  If one gpu and 13 cpus are allocated for one hour, it will be billed for 2 gpu, which is 24SU on a100 partition.    
+  If one gpu and 13 cpus are allocated for one hour, it will be billed for 2 gpus, which is 24SU on a100 partition.    
