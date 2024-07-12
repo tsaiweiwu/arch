@@ -5,24 +5,24 @@
 - log into rockfish  
 
 - get an interactive job  
-  $ interact -p a100 -N1 -n12 -G1 -t 120 -q qos_gpu -a <your_gpu_account>   
+  `$ interact -p a100 -N1 -n12 -G1 -t 120 -q qos_gpu -a <your_gpu_account>`   
 
   wait for your job to start ...     
 
 - load necessary modules  
 
-  $ ml load anaconda cuda/11.8.0  
-  $ conda create -n myenv python=3.9  
+  `$ ml load anaconda cuda/11.8.0`  
+  `$ conda create -n myenv python=3.9`  
 
 - install python packages in the environment   
 
-  $ conda install -n myenv conda-forge::numpy   
+  `$ conda install -n myenv conda-forge::numpy`   
 
 - install kernal to so it will show up in the jupyter notebook/lab  
-  $ pip install ipython ipykernel
-  $ ipython kernel install --user --name="Python(your_env_name)" 
+  `$ pip install ipython ipykernel`
+  `$ ipython kernel install --user --name="Python(your_env_name)"` 
 
-  $ conda deactivate  
+  `$ conda deactivate`  
 
 ### Open OnDemand
 
