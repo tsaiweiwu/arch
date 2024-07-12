@@ -1,20 +1,23 @@
 
 ### Building Kraken2 database
 
-- LOADING KRAKEN/BRACKEN MODULES
+- Get an interactive job   
+  $ interact -p shared -N1 -n16 -t 240  
+  
+- Loadi Kraken2/Bracken modules
 
-  $ ml kraken2/2.1.2 
-  $ ml foss/2023a 
-  $ ml Bracken/2.9-GCCcore-10.3.0  
+  $ ml kraken2/2.1.2   
+  $ ml foss/2023a   
+  $ ml Bracken/2.9-GCCcore-10.3.0    
 
-- CREATING DIRECTORY YOU WANT TO BUILD THE KRAKEN DATABASE
+- Create a directory to build the database
  
   As an example, here, I've created a folder named "database_kraken2"   
   $ cd ~/  
   $ mkdir database_kraken2  
   $ cd database_kraken2/  
 
--  BUILDING KRAKEN2 DATABASE (it takes few hours for library=bacteria)  
+- Build Kraken2 database (it takes few hours for library=bacteria)  
 
    First, we're creating variables for each parameter (just to have a clearer view)   
    $ LIBRARY=bacteria  
@@ -32,14 +35,14 @@
 
 
 ### RUNNING BRACKEN
- 
-  $ KRAKEN_DB=$HOME/database_kraken2/$DB    
+
+- Replace the line below with the full path to your kraken2 db   
+  $ KRAKEN_DB=$HOME/database_kraken2/$DB     
   
-  Replace the above with the full path to your kraken2 db
-
+- There might be problems setting more than 1 thread here, but you'll be fine using 1   
   $ THREADS=1                                                                            
-  There might be problems setting more than 1 thread here, but you'll be fine using 1
 
+- Run Bracken  
   $ KMER_LEN=75  
   $ READ_LEN=136  
   $ KRAKEN_INSTALLATION=/data/apps/extern/kraken2/2.1.2  
