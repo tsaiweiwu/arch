@@ -8,11 +8,13 @@
 
 - For GUI (Graphical User Interface) usage:
 
-  Launch Matlab GUI `$ matlab`    
+  Launch Matlab GUI
+  `$ matlab`    
   
 - For CLI (Command Line Interface) usage: 
 
-  Launch Matlab `$ matlab -nodesktop -nosplash`   
+  Launch Matlab
+  `$ matlab -nodesktop -nosplash`   
 
 - Running configCluster.m to create the cluster profile `rockfish` in `$HOME/.matlab`   
   > \>\> configCluster   
