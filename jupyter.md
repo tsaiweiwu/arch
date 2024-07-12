@@ -1,30 +1,28 @@
-## Create a conda env and use it in the jupyter notebook/lab
+## Run a conda env in the jupyter notebook/lab   
 
-### Firstly create a conda env from the terminal  
+### Firstly create a conda env from the terminal   
 
 - log into rockfish  
 
 - get an interactive job  
-
   $ interact -p a100 -N1 -n12 -G1 -t 120 -q qos_gpu -a <your_gpu_account>   
 
-  wait for your job to start  
+  wait for your job to start ...     
 
 - load necessary modules  
 
   $ ml load anaconda cuda/11.8.0  
-
   $ conda create -n myenv python=3.9  
 
-- install python packages in the environment  
+- install python packages in the environment   
 
   $ conda install -n myenv conda-forge::numpy   
 
+- install kernal to so it will show up in the jupyter notebook/lab  
   $ pip install ipython ipykernel
   $ ipython kernel install --user --name="Python(your_env_name)" 
 
   $ conda deactivate  
-
 
 ### Open OnDemand
 
