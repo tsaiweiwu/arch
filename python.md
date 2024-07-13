@@ -1,5 +1,5 @@
 
-### Create a environment with virtualenv
+### Create an environment with virtualenv from python/3.8.6 modulefile
 
 - load python module
 
@@ -9,7 +9,7 @@
 
   `$ python -m venv /path_to_new_env`   
    
-- activate
+- activate the env
  
    `$ source /path_to_new_env/bin/activate`   
 
@@ -19,7 +19,7 @@
 
 ### Install tensorflow-gpu
 
-- get an interactive job on gpu node
+- get an interactive job on a gpu node
 
   `$ interact -p a100 -N1 -n12 --gres=gpu:1 -t 60`       
 
@@ -38,11 +38,14 @@
 - make sure python is from the conda env  
 
   `$ conda activate tf` 
-
   `$ which python`  
 
 - install tensorflow-gpu
 
-  `$ pip install tensorflow-gpu` 
+  `$ pip install tensorflow-gpu==2.9.3`
+
+- test
+
+  `$ python -c 'import tensorflow`  
 
   
