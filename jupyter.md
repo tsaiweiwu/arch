@@ -20,9 +20,16 @@
 
 - install kernal to so it will show up in the jupyter notebook/lab  
   `$ pip install ipython ipykernel`  
-  `$ ipython kernel install --user --name="Python(your_env_name)"` 
+  `$ ipython kernel install --user --name="Python(your_env_name)"`
 
   `$ conda deactivate`  
+  
+- list and remove kernels
+
+  `$ jupyter kernelspec list`  
+  kernels saved in  `$HOME/.local/share/jupyter/kernels/`
+  
+  `$ jupyter kernelspec remove <kernel_name>`   
 
 ### Open OnDemand
 
