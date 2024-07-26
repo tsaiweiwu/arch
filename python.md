@@ -37,7 +37,7 @@
   
 - make sure python is from the conda env  
 
-  `$ conda activate tf` 
+  `$ conda activate tf`  
   `$ which python`  
 
 - install tensorflow-gpu
