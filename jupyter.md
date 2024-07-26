@@ -19,7 +19,7 @@
   `$ conda install -n myenv conda-forge::numpy`   
 
 - install kernal to so it will show up in the jupyter notebook/lab  
-  `$ pip install ipython ipykernel`
+  `$ pip install ipython ipykernel`  
   `$ ipython kernel install --user --name="Python(your_env_name)"` 
 
   `$ conda deactivate`  
@@ -34,3 +34,39 @@
 
   fill in the fields and click on the "Launch" button, there are some instructions on the following page describing how to conda create the environment and use it in the jupyter server. 
 
+
+
+### Install tensorflow-gpu
+
+- `$ pip install tensorrt==8.6.1`  
+  `$ pip install tensorrt-cu11==10.2.0.post1`  
+  `$ pip install tensorflow-gpu==2.9.3`
+  
+  TensorRT libraries is in lib/python3.10/site-packages/tensorrt_libs
+
+- python
+  >>> import tensorflow as tf
+  >>> import
+
+- log into rockfish  
+
+- get an interactive job  
+  `$ interact -p a100 -N1 -n12 -G1 -t 120 -q qos_gpu -a <your_gpu_account>`   
+
+  wait for your job to start ...     
+
+- load necessary modules  
+
+  `$ ml load anaconda cuda/11.8.0 cudnn/`  
+  `$ conda create -y -n tensorflow python=3.9`  
+
+- install python packages in the environment   
+
+  `$ conda activate tensorflow`  
+  `$ conda install conda-forge::numpy`   
+
+- install kernal to so it will show up in the jupyter notebook/lab  
+  `$ pip install ipython ipykernel`  
+  `$ ipython kernel install --user --name="Python(your_env_name)"` 
+
+  `$ conda deactivate`  
