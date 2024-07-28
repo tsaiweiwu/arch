@@ -4,7 +4,13 @@
 
 - log into rockfish  
 
-- get an interactive job  
+- get an interactive job
+
+  for cpu partitions    
+  `$ interact -p shared -N1 -n32 -t 120`  
+  `$ interact -p parallel -N1 -n48 -t 120`  
+
+  for gpu partition  
   `$ interact -p a100 -N1 -n12 -G1 -t 120 -q qos_gpu -a <your_gpu_account>`   
 
   wait for your job to start ...     
