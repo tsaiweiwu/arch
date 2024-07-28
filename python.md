@@ -13,9 +13,17 @@
  
    `$ source /path_to_new_env/bin/activate`   
 
-- deactivate
+- check where your python is from  
+  `$ which python`  
+  `$ which pip`
 
-   `$ deactivate`  
+- pip install packages
+    
+- leave the virtual environment  
+
+   `$ deactivate`
+
+- **There is a problem of mpi4py with this installation method**  
 
 ### Install tensorflow-gpu
 
