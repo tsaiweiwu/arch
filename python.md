@@ -56,7 +56,8 @@
 
   `$ pip install tensorrt==8.6.1`  
   `$ pip install tensorrt-cu11==10.2.0.post1`  
-  `$ pip install tensorflow-gpu==2.9.3`
+  `$ pip install tensorflow-gpu==2.9.3`  
+  `$ pip install numpy==1.24.4`  
 
   TensorRT libraries is in `lib/python3.10/site-packages/tensorrt_libs`
   
