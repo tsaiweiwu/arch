@@ -1,5 +1,5 @@
 
-### Create an environment with virtualenv from python/3.8.6 modulefile
+## Create an environment with virtualenv from python/3.8.6 modulefile
 
 - load python module
 
@@ -23,9 +23,9 @@
 
    `$ deactivate`
 
-- **There is a problem of mpi4py with this installation method**  
+## Tensorflow-gpu
 
-### Install tensorflow-gpu
+### Install tensorflow-gpu with gcc/9.3.0
 
 - get an interactive job on a gpu node
 
@@ -33,9 +33,11 @@
 
   wait for the job to start ...
 
-- load necessary modules (with gcc/9.3.0)   
+- load necessary modules   
 
-  `$ module load anaconda/2020.07 cuda/11.8.0 cudnn/8.0.4.30-11.1-linux-x64`   
+  `$ ml load gcc/9.3.0`  
+  `$ ml load anaconda/2020.07`  
+  `$ ml load cuda/11.8.0 cudnn/8.0.4.30-11.1-linux-x64`   
 
 - create a conda env
 
@@ -65,4 +67,22 @@
 
   `python -c "import tensorflow as tf; print('Num GPUs Available: ', len(tf.config.list_physical_devices('GPU')))"`   
 
+### Install tensorflow-gpu with GCC/11.3.0  
+
+- get an interactive job on a gpu node
+- load necessary modules   
+
+  `$ ml load GCC/11.3.0`  
+  `$ ml load Python/3.10.4-GCCcore-11.3.0`  
+  `$ ml load CUDA/11.7.0 cuDNN/8.4.1.50-CUDA-11.7.0`
+
+- create a venv and activate the env
   
+- pip install packages
+
+  `$ pip install tensorrt==8.6.1.post1`  
+  `$ pip install tensorflow-gpu==2.9.3`  
+  `$ pip install numpy==1.24.4`  
+
+- test
+
