@@ -33,7 +33,7 @@
 
   wait for the job to start ...
 
-- load necessary modules
+- load necessary modules (with gcc/9.3.0)   
 
   `$ module load anaconda/2020.07 cuda/11.8.0 cudnn/8.0.4.30-11.1-linux-x64`   
 
