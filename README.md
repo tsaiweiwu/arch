@@ -4,6 +4,8 @@
 
   <img width="508" alt="arch_resource" src="https://github.com/tsaiweiwu/arch/assets/10214345/06c6608f-adeb-4806-90a4-57375846d33e">
 
+  - `$ interact -p parallel -N1 -n2 -m 189000m -t 0:5:0`   
+
 - GPU billing  
 
   for a100 partition, there are 4 gpus and 48 cpus per node, which maps to 12 cpus for 1 gpu.   
