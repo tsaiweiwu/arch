@@ -80,9 +80,8 @@
   
 - pip install packages
 
-  `$ pip install tensorrt==8.6.1.post1`  
-  `$ pip install tensorflow-gpu==2.9.3`  
   `$ pip install numpy==1.24.4`  
+ `$ pip install tensorflow-gpu==2.9.3`  
 
 - test
 
